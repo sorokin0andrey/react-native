@@ -7,6 +7,7 @@
 
 package com.facebook.react.modules.appearance;
 
+import android.util.Log;
 import android.content.Context;
 import android.content.res.Configuration;
 import androidx.annotation.Nullable;
@@ -74,6 +75,7 @@ public class AppearanceModule extends NativeAppearanceSpec {
 
   @Override
   public String getColorScheme() {
+    Log.d("ReactNative", "getColorScheme");
     mColorScheme = colorSchemeForCurrentConfiguration(getReactApplicationContext());
     return mColorScheme;
   }
